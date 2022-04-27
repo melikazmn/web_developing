@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="cal.jpg"> 
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <table>
+        <caption>MY CALCULATOR</caption>
+        <tr>
+           <th colspan="4" class="answer" >
+               <div class="operand" id="history"></div>
+               <div id="output" ></div></th>
+           
+        </tr>
+        <tr>
+            <td colspan="2" class="elements allclear" onclick="allclear()" >AC</td>
+            <td  class="elements Delete" onclick="clear()">c</td>
+            
+            <td  class="elements" id="/">÷</td>
+        </tr>
+        <tr>
+            <td  class="number" id="7">7</td>
+            <td  class="number" id="8">8</td>
+            <td  class="number" id="9">9</td>
+            <td  class="elements" id="*">×</td>
+        </tr>
+        <tr>
+            <td class="number" id="4" >4</td>
+            <td class="number" id="5">5</td>
+            <td class="number" id="6">6</td>
+            <td class="elements" id="-">-</td>
+        </tr>
+        <tr>
+            <td  class="number" id="1">1</td>
+            <td  class="number" id="2">2</td>
+            <td  class="number" id="3">3</td>
+            <td  class="elements" id="+">+</td>
+        </tr>
+        <tr>
+            <td  class="elements percent" id="%">%</td>
+            <td  class="number" id="0">0</td>
+            <td  class="elements" id=".">.</td>
+            <td  class="elements equal" id="=" onclick="">=</td>
+        </tr>
+    </table>
+
+    
+</body>
+</html>

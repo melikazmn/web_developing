@@ -1,0 +1,81 @@
+body{
+    box-sizing: border-box;
+    background-color: #171b20;
+}
+
+table{
+    margin: auto;
+    margin-top: 10vw;
+    height: 30vw;
+    width: 24vw;
+    text-align: center;
+    font-size: 2vw;
+    font-family: fantasy;
+    color: white;
+   
+}
+
+
+tr{
+    background-color: #34373d;
+ 
+}
+td,th{
+    
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px #000000;
+    
+}
+
+.percent{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.elements{
+    background-color: #459285 ;
+}
+
+
+td:hover,
+th:hover{
+    cursor: pointer;
+    background-color: #9b9b9b;
+    text-shadow: 0.3vw 0.3vw 1px #34373d;
+    box-shadow: 2px 2px 3px #000000,-2px 0px 3px #000000 ;
+}
+
+/* .answer {
+   
+} */
+
+.answer div{
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-right: 1vw;
+}
+
+.answer:hover{
+    background-color: #34373d;
+    box-shadow:0px 0px 0px #00000000 ; ;
+}
+
+div.operand{
+    height: 2vw;
+    color: rgb(172, 175, 178);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 1vw;
+    position: relative;
+    float:top right;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+caption:hover {
+ text-shadow: 0.1vw 0.1vw 2px #02ccb1;
+}
+.elements:hover{
+    background-color: #8acfc5;
+    text-shadow: 0.2vw 0.2vw 1px #6d6969 ;
+}
