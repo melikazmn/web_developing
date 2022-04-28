@@ -47,13 +47,13 @@ var operator = document.getElementsByClassName("elements");
 for(var i = 0 ;i<operator.length;i++){
     operator[i].addEventListener('click',function(){
         var output = GetAnswer();
-        var history = GetHistory()
+        var history = GetHistory();
             if(this.id == "="){
-                history = history + output
-                printHistory(history);
-                history = history.replace(/%/g,"/100*")
-                history = history.replace(/÷/g,"/")
-                history = history.replace(/×/g,"*")
+                history = history + output;
+                printHistory("");
+                history = history.replace(/%/g,"/100*");
+                history = history.replace(/÷/g,"/");
+                history = history.replace(/×/g,"*");
                 var res = eval(history);
                 answer(res);
                 
@@ -66,8 +66,16 @@ for(var i = 0 ;i<operator.length;i++){
             }
             else {
                 history = history + output + this.id;
+                var lastchar = history.charAt(history.length-2);
+                if(["+","-","÷","×","%"].indexOf(lastchar)>= 0){   
+                    history = history.substring(0,history.length-2) + this.id ;
+                    printHistory(history);
+                    answer("");
+                }
+                else{
                 printHistory(history);
                 answer("");
+            }
             }
     })
 }
@@ -75,6 +83,11 @@ for(var i = 0 ;i<operator.length;i++){
 var number = document.getElementsByClassName("number");
 for(var i = 0 ;i<number.length;i++){
     number[i].addEventListener('click',function(){
-        document.getElementById("output").innerText += this.id;
+        var output = GetAnswer();
+        if(output.length == 15){
+            document.getElementById("output").innerText = output;
+        }
+        else document.getElementById("output").innerText += this.id;
     })
+    
 }
