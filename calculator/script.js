@@ -50,12 +50,13 @@ for(var i = 0 ;i<operator.length;i++){
         var history = GetHistory()
             if(this.id == "="){
                 history = history + output
+                printHistory(history);
                 history = history.replace(/%/g,"/100*")
                 history = history.replace(/÷/g,"/")
                 history = history.replace(/×/g,"*")
                 var res = eval(history);
                 answer(res);
-                printHistory("");
+                
             }
             else if(this.id == "."){
                 answer(output+this.id);
