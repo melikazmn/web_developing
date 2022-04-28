@@ -26,7 +26,19 @@ function allclear(){
 }
 
 function clear(){
-    //
+    var output = GetAnswer();
+    var history = GetHistory();
+    console.log(output);
+    if(output!=""){
+        output = output.slice(0,output.length-1)
+        answer(output);
+        console.log(output);
+    }
+    else{
+        history =  history.slice(0,history.length-1)
+        printHistory(history);
+        console.log(history);
+    }
 }
 
 
@@ -38,12 +50,18 @@ for(var i = 0 ;i<operator.length;i++){
         var history = GetHistory()
             if(this.id == "="){
                 history = history + output
+                history = history.replace(/%/g,"/100*")
+                history = history.replace(/÷/g,"/")
+                history = history.replace(/×/g,"*")
                 var res = eval(history);
                 answer(res);
                 printHistory("");
             }
             else if(this.id == "."){
                 answer(output+this.id);
+            }
+            else if(this.id == "clear"){
+                clear()
             }
             else {
                 history = history + output + this.id;

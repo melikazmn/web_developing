@@ -6,8 +6,8 @@ body{
 table{
     margin: auto;
     margin-top: 10vw;
-    height: 30vw;
-    width: 24vw;
+    height: 35vw;
+    width: 28vw;
     text-align: center;
     font-size: 2vw;
     font-family: fantasy;
@@ -45,10 +45,6 @@ th:hover{
     box-shadow: 2px 2px 3px #000000,-2px 0px 3px #000000 ;
 }
 
-/* .answer {
-   
-} */
-
 .answer div{
     text-align: right;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -70,6 +66,10 @@ div.operand{
     float:top right;
     word-wrap: break-word;
     word-break: break-all;
+}
+
+#output{
+    height: 2vw;
 }
 
 caption:hover {
